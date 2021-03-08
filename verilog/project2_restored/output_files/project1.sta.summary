@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk2'
+Slack : -9.885
+TNS   : -17443.733
+
+Type  : Slow 1200mV 85C Model Setup 'keypad:kp1|clk1[15]'
+Slack : -1.118
+TNS   : -25.786
+
+Type  : Slow 1200mV 85C Model Setup 'sevensegment:sseg|clk1[15]'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk2'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sevensegment:sseg|clk1[15]'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keypad:kp1|clk1[15]'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk2'
+Slack : -3.000
+TNS   : -2247.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keypad:kp1|clk1[15]'
+Slack : -1.000
+TNS   : -76.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sevensegment:sseg|clk1[15]'
+Slack : -1.000
+TNS   : -6.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk2'
+Slack : -8.766
+TNS   : -15596.178
+
+Type  : Slow 1200mV 0C Model Setup 'keypad:kp1|clk1[15]'
+Slack : -0.872
+TNS   : -18.813
+
+Type  : Slow 1200mV 0C Model Setup 'sevensegment:sseg|clk1[15]'
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk2'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sevensegment:sseg|clk1[15]'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keypad:kp1|clk1[15]'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk2'
+Slack : -3.000
+TNS   : -2247.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keypad:kp1|clk1[15]'
+Slack : -1.000
+TNS   : -76.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sevensegment:sseg|clk1[15]'
+Slack : -1.000
+TNS   : -6.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk2'
+Slack : -5.452
+TNS   : -9216.346
+
+Type  : Fast 1200mV 0C Model Setup 'keypad:kp1|clk1[15]'
+Slack : -0.207
+TNS   : -1.794
+
+Type  : Fast 1200mV 0C Model Setup 'sevensegment:sseg|clk1[15]'
+Slack : 0.535
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk2'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sevensegment:sseg|clk1[15]'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keypad:kp1|clk1[15]'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk2'
+Slack : -3.000
+TNS   : -2392.128
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keypad:kp1|clk1[15]'
+Slack : -1.000
+TNS   : -76.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sevensegment:sseg|clk1[15]'
+Slack : -1.000
+TNS   : -6.000
+
+------------------------------------------------------------

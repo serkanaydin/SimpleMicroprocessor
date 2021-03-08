@@ -1,0 +1,38 @@
+Quartus Prime Archive log --	C:/intelFPGA_lite/18.0/project2.qarlog
+
+Archive:	C:/intelFPGA_lite/18.0/project2.qar
+Date:		Sun Sep 13 15:58:28 2020
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/intelFPGA_lite/18.0/RAM.txt
+C:/intelFPGA_lite/18.0/SDC1.sdc
+C:/intelFPGA_lite/18.0/board.v
+C:/intelFPGA_lite/18.0/keypad.v
+C:/intelFPGA_lite/18.0/processor.v
+C:/intelFPGA_lite/18.0/project1.qpf
+C:/intelFPGA_lite/18.0/project1.qsf
+C:/intelFPGA_lite/18.0/sevensegment.v
+c:/intelfpga_lite/18.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 9 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sun Sep 13 16:00:40 2020
+Source archive file:	C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2.qar
+Archive was extracted into	C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon Sep 14 22:53:02 2020
+Source archive file:	C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2.qar
+Archive was extracted into	C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Tue Sep 15 15:17:01 2020
+Source archive file:	C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2.qar
+Archive was extracted into	C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/
+		 - successfully.

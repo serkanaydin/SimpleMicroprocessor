@@ -1,0 +1,417 @@
+Analysis & Synthesis report for project1
+Tue Sep 15 15:17:39 2020
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "keypad:kp1"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Sep 15 15:17:39 2020       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; project1                                    ;
+; Top-level Entity Name              ; board                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 4,316                                       ;
+;     Total combinational functions  ; 2,461                                       ;
+;     Dedicated logic registers      ; 2,326                                       ;
+; Total registers                    ; 2326                                        ;
+; Total pins                         ; 21                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                            ; board              ; project1           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------+---------+
+; processor.v                      ; yes             ; User Verilog HDL File  ; C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v    ;         ;
+; sevensegment.v                   ; yes             ; User Verilog HDL File  ; C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/sevensegment.v ;         ;
+; board.v                          ; yes             ; User Verilog HDL File  ; C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v        ;         ;
+; keypad.v                         ; yes             ; User Verilog HDL File  ; C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/keypad.v       ;         ;
+; /intelfpga_lite/18.0/ram.txt     ; yes             ; Auto-Found File        ; /intelfpga_lite/18.0/ram.txt                                                       ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 4,316      ;
+;                                             ;            ;
+; Total combinational functions               ; 2461       ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 1859       ;
+;     -- 3 input functions                    ; 188        ;
+;     -- <=2 input functions                  ; 414        ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 2391       ;
+;     -- arithmetic mode                      ; 70         ;
+;                                             ;            ;
+; Total registers                             ; 2326       ;
+;     -- Dedicated logic registers            ; 2326       ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 21         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; clk2~input ;
+; Maximum fan-out                             ; 2244       ;
+; Total fan-out                               ; 15443      ;
+; Average fan-out                             ; 3.20       ;
++---------------------------------------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+--------------+
+; |board                     ; 2461 (49)           ; 2326 (16)                 ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |board                   ; board        ; work         ;
+;    |keypad:kp1|            ; 82 (82)             ; 84 (84)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |board|keypad:kp1        ; keypad       ; work         ;
+;    |processor:cpu|         ; 447 (447)           ; 156 (156)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |board|processor:cpu     ; processor    ; work         ;
+;    |ram:ram1|              ; 1848 (1848)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |board|ram:ram1          ; ram          ; work         ;
+;    |sevensegment:sseg|     ; 35 (35)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |board|sevensegment:sseg ; sevensegment ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; keypad:kp1|clk1[0]                     ; Merged with sevensegment:sseg|clk1[0]  ;
+; keypad:kp1|clk1[1]                     ; Merged with sevensegment:sseg|clk1[1]  ;
+; keypad:kp1|clk1[2]                     ; Merged with sevensegment:sseg|clk1[2]  ;
+; keypad:kp1|clk1[3]                     ; Merged with sevensegment:sseg|clk1[3]  ;
+; keypad:kp1|clk1[4]                     ; Merged with sevensegment:sseg|clk1[4]  ;
+; keypad:kp1|clk1[5]                     ; Merged with sevensegment:sseg|clk1[5]  ;
+; keypad:kp1|clk1[6]                     ; Merged with sevensegment:sseg|clk1[6]  ;
+; keypad:kp1|clk1[7]                     ; Merged with sevensegment:sseg|clk1[7]  ;
+; keypad:kp1|clk1[8]                     ; Merged with sevensegment:sseg|clk1[8]  ;
+; keypad:kp1|clk1[9]                     ; Merged with sevensegment:sseg|clk1[9]  ;
+; keypad:kp1|clk1[10]                    ; Merged with sevensegment:sseg|clk1[10] ;
+; keypad:kp1|clk1[11]                    ; Merged with sevensegment:sseg|clk1[11] ;
+; keypad:kp1|clk1[12]                    ; Merged with sevensegment:sseg|clk1[12] ;
+; keypad:kp1|clk1[13]                    ; Merged with sevensegment:sseg|clk1[13] ;
+; keypad:kp1|clk1[14]                    ; Merged with sevensegment:sseg|clk1[14] ;
+; sevensegment:sseg|clk1[16..25]         ; Lost fanout                            ;
+; keypad:kp1|clk1[16..25]                ; Lost fanout                            ;
+; Total Number of Removed Registers = 35 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2326  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 28    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2239  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; sevensegment:sseg|grounds[1]           ; 2       ;
+; sevensegment:sseg|grounds[2]           ; 2       ;
+; sevensegment:sseg|grounds[3]           ; 2       ;
+; keypad:kp1|rowwrite[1]                 ; 6       ;
+; keypad:kp1|rowwrite[2]                 ; 6       ;
+; keypad:kp1|rowwrite[3]                 ; 6       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; Yes        ; |board|processor:cpu|state[3]       ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 14 LEs               ; 8 LEs                  ; Yes        ; |board|processor:cpu|state[2]       ;
+; 16:1               ; 15 bits   ; 150 LEs       ; 15 LEs               ; 135 LEs                ; Yes        ; |board|processor:cpu|regbank[6][6]  ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 16 LEs               ; 144 LEs                ; Yes        ; |board|processor:cpu|regbank[5][9]  ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 16 LEs               ; 144 LEs                ; Yes        ; |board|processor:cpu|regbank[4][13] ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 16 LEs               ; 144 LEs                ; Yes        ; |board|processor:cpu|regbank[3][6]  ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 16 LEs               ; 144 LEs                ; Yes        ; |board|processor:cpu|regbank[2][6]  ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 16 LEs               ; 144 LEs                ; Yes        ; |board|processor:cpu|regbank[1][11] ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 16 LEs               ; 144 LEs                ; Yes        ; |board|processor:cpu|regbank[0][14] ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 12 LEs               ; 60 LEs                 ; Yes        ; |board|processor:cpu|pc[4]          ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 8 LEs                ; 20 LEs                 ; Yes        ; |board|processor:cpu|regbank[7][14] ;
+; 11:1               ; 12 bits   ; 84 LEs        ; 24 LEs               ; 60 LEs                 ; Yes        ; |board|processor:cpu|regbank[7][8]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |board|sevensegment:sseg|Mux2       ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |board|processor:cpu|Mux151         ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |board|processor:cpu|Mux164         ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 24 LEs               ; 48 LEs                 ; No         ; |board|processor:cpu|Mux202         ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |board|processor:cpu|Add0           ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; No         ; |board|processor:cpu|Mux189         ;
+; 12:1               ; 15 bits   ; 120 LEs       ; 60 LEs               ; 60 LEs                 ; No         ; |board|processor:cpu|Mux231         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |board|processor:cpu|Add4           ;
+; 7:1                ; 12 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; No         ; |board|processor:cpu|Mux179         ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |board|processor:cpu|Add4           ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; No         ; |board|processor:cpu|Add0           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keypad:kp1"                                                                                                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                     ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; keyout ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (4 bits) it drives; bit(s) "keyout[15..4]" have no fanouts ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 21                          ;
+; cycloneiii_ff         ; 2326                        ;
+;     ENA               ; 2211                        ;
+;     ENA SLD           ; 28                          ;
+;     plain             ; 87                          ;
+; cycloneiii_lcell_comb ; 2473                        ;
+;     arith             ; 70                          ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 43                          ;
+;     normal            ; 2403                        ;
+;         1 data inputs ; 380                         ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 145                         ;
+;         4 data inputs ; 1859                        ;
+;                       ;                             ;
+; Max LUT depth         ; 16.00                       ;
+; Average LUT depth     ; 9.08                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Tue Sep 15 15:17:21 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project1 -c project1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file processor.v
+    Info (12023): Found entity 1: processor File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sevensegment.v
+    Info (12023): Found entity 1: sevensegment File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/sevensegment.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file board.v
+    Info (12023): Found entity 1: board File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 1
+    Info (12023): Found entity 2: ram File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 77
+Info (12021): Found 1 design units, including 1 entities, in source file keypad.v
+    Info (12023): Found entity 1: keypad File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/keypad.v Line: 1
+Info (12127): Elaborating entity "board" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at board.v(18): truncated value with size 32 to match size of target (26) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 18
+Info (12128): Elaborating entity "ram" for hierarchy "ram:ram1" File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 66
+Warning (10850): Verilog HDL warning at board.v(90): number of words (71) in memory file does not match the number of elements in the address range [0:127] File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 90
+Info (12128): Elaborating entity "processor" for hierarchy "processor:cpu" File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 67
+Warning (10230): Verilog HDL assignment warning at processor.v(45): truncated value with size 32 to match size of target (12) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 45
+Warning (10230): Verilog HDL assignment warning at processor.v(51): truncated value with size 32 to match size of target (12) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 51
+Warning (10230): Verilog HDL assignment warning at processor.v(81): truncated value with size 32 to match size of target (16) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 81
+Warning (10230): Verilog HDL assignment warning at processor.v(86): truncated value with size 32 to match size of target (16) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 86
+Warning (10230): Verilog HDL assignment warning at processor.v(96): truncated value with size 32 to match size of target (16) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 96
+Warning (10230): Verilog HDL assignment warning at processor.v(102): truncated value with size 32 to match size of target (16) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 102
+Warning (10230): Verilog HDL assignment warning at processor.v(107): truncated value with size 16 to match size of target (12) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 107
+Warning (10230): Verilog HDL assignment warning at processor.v(156): truncated value with size 32 to match size of target (16) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 156
+Warning (10230): Verilog HDL assignment warning at processor.v(157): truncated value with size 32 to match size of target (16) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/processor.v Line: 157
+Info (12128): Elaborating entity "keypad" for hierarchy "keypad:kp1" File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 68
+Warning (10230): Verilog HDL assignment warning at keypad.v(20): truncated value with size 32 to match size of target (26) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/keypad.v Line: 20
+Info (12128): Elaborating entity "sevensegment" for hierarchy "sevensegment:sseg" File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 69
+Warning (10230): Verilog HDL assignment warning at sevensegment.v(15): truncated value with size 32 to match size of target (2) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/sevensegment.v Line: 15
+Warning (10230): Verilog HDL assignment warning at sevensegment.v(20): truncated value with size 32 to match size of target (26) File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/sevensegment.v Line: 20
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "ram:ram1|ram" is uninferred due to asynchronous read logic File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 83
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 20 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/serka/OneDrive/Masaüstü/project2/verilog/project2_restored/board.v Line: 5
+Info (21057): Implemented 4382 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 4361 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4812 megabytes
+    Info: Processing ended: Tue Sep 15 15:17:39 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:33
+
+

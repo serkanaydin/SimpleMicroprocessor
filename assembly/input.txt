@@ -1,0 +1,69 @@
+.data
+			KEYPAD: 0x060
+            SEVENSEG: 0x070
+            KEYPAD-ready: 0x061
+.code
+            ldi 7 0x05f
+            ldi 4 KEYPAD-ready
+
+loop        ldi 5 0x001
+            ld 2 4
+            ld 2 2
+            and 2 5 2
+            jz loop
+            ldi 3 KEYPAD
+            ld 3 3
+            ld 3 3
+            ldi 5 0x00e
+            ldi 2 0x00f
+            call additionControl
+            call multControl
+            call new
+            add 1 1 3
+            ldi 5 SEVENSEG
+            ld 5 5
+            st 5 1
+
+            jmp loop
+new
+            ldi 2 0x009
+            push 0
+            mov 0 1
+            ldi 5 0xffff
+            and 5 5 1
+            jz back
+            jmp shift
+shift       add 1 1 0
+            dec 2
+            jz back
+            jmp shift
+back        pop 0
+            ret
+
+
+addition         ldi 5 SEVENSEG
+            ld 2 5
+            add 0 0 1
+            st 2 0
+            sub 1 1 1
+            jmp loop
+multi     ldi 5 SEVENSEG
+            ld 2 5
+            mov 3 0
+            jmp mul0
+
+mul0     	dec 1
+            jz pass
+            add 0 0 3
+            jmp mul0
+pass
+            st 2 0
+            jmp loop
+additionControl
+            xor 2 3 2
+            jz addition
+            ret
+multControl
+            xor 5 3 5
+            jz multi
+            ret
